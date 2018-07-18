@@ -151,9 +151,9 @@
 
 		/*bnr-carousel*/
 		if( $(".bnr-carousel .carousel-items").length ){
-			$(".bnr-carousel .carousel-items").flickity({
+			window.bnrCarousel = $(".bnr-carousel .carousel-items").flickity({
 				imagesLoaded: true,
-				autoPlay: 5000,
+				autoPlay: 4000,
 				pauseAutoPlayOnHover: true,
 				arrowShape: arrowStyle,
 				initialIndex: 0,
@@ -162,13 +162,21 @@
 				prevNextButtons: false,
 				draggable: false,
 				wrapAround: true,
-				pageDots: true,
+				pageDots: false,
 				contain: false,
 				percentPosition: true,
 				cellSelector: 'figure',
 				cellAlign: "center"
 			});
+			bnrCarousel.data("flickity");
+			//arrows
 			flickityPrevNext(".bnr-carousel");
+			//dots
+	    $('.bnr-carousel .button-carousel-nav').on( 'click', 'li', function() {
+	      var index = $(this).index();
+	      bnrCarousel.flickity( 'select', index );
+	      console.log(index)
+	    });
 		}
 
 

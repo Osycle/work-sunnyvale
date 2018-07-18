@@ -7,9 +7,9 @@
 										 ---HEADER---
 */
 
-$header-top-height: 100px; 
+$header-top-height: 60px; 
 $header-middle-height: 90px; 
-$header-bottom-height: 70px;
+$header-bottom-height: 110px;
 $header-min-menu: 70px;
 #header{
 	top: 0;
@@ -35,7 +35,7 @@ header{
 }
 .header-hidden{
 	//position: relative;
-	height: $header-top-height;
+	height: 170px;
 	background-color: #fafafa;
 	transition: height 0.3s ease-in-out 0.4s;
 	//display: none;
@@ -46,14 +46,20 @@ header{
 .header-top-content, .header-bottom-content{
 	transition: all 0.5s ease 0.0s;
 	transform: inherit;transform: unset;
-	background-color: white;
 }
 .header-top-content{
+	background-color: $color-gray-1;
+	height: $header-top-height;
 	transform-origin: 50% 0;
+	color: $color-gray-2;
+	[class*='introinfo']{
+		padding: 18px 0;
+	}
 }
 .header-bottom-content{
 	position: relative;
 	top: 0px;
+	background-color: white;
 	transform: inherit;transform: unset;
 
 }
@@ -66,17 +72,18 @@ header{
 	}
 	&.scrolled, &.header-pages{
 		.header-top-content{
-			/* perspective(1500px)  */
-			//transform: rotateX(-15deg);	
-		}
-		.menu ul:not([class*="sub-menu"]) > li > a{
-			padding: 27px 40px;
+			transform: rotateX(-90deg) perspective(1500px) ;	
 		}
 		.logo{
-			height: 50px;
+			.img-content{
+				width: 25%;
+			}
+		}
+		.menu{
+			height: 75px;
 		}
 		.header-bottom-content{
-			top: -136px;
+			top: -60px;
 			box-shadow: 0px 5px 20px -10px black;
 		}
 	}
@@ -86,18 +93,24 @@ header{
 
 .logo{
 	height: $header-top-height;
-	background-color: black;
 	transition: all 0.3s ease-in-out;
 	img{
 		width: auto;
 		//max-width: unset;
 	}
-	.text-big{
-		font-size: 1.5em;
+	.desc-content{
+		border-left: 1px solid #dddddd;
+		padding-left: 15px;	
+	}
+	.logo-text{
+		color: #dddddd;
+		font-size: 1em;
+		text-transform: uppercase;
 	}
 	@media ( max-width: 1199px ){
 		//height: 210px;
 	}
+
 }
 .menu{
 	height: $header-bottom-height;
@@ -109,10 +122,12 @@ header{
 			display: inline-block;
 			position: relative;
 			letter-spacing: 0;
-			text-transform: lowercase;
+			margin: 0 5px;
+			text-transform: uppercase;
 			& > a{
+				border-radius: 15px;
 				display: block;
-				padding: 42px 40px;
+				padding: 7px 10px;
 				position: relative;
 				font-weight: 600;
 			}
@@ -142,33 +157,14 @@ header{
 		//overflow: hidden;
 		display: inline-block;
 		transition: all 0.4s ease;
-		.arrow{
-			position: absolute;
-			@extend .trans-h-center;
+		a{
+			transition: all 0.3s ease;
 		}
-		&:hover{
-			color: white;
-			.desc-content{
-				color: black;
-			}
-			&:before{
-				transform: translate(-50%, -50%) scale(1);
-				opacity: 1;
-				transition: all 0.7s ease;
-			}
-		}
-		&:before{
-			@extend .claf;
-			//z-index: -1;
-			height: 100%;
-			left: 50%;
-			opacity: 0;
-			top: 50%;
-			transform: translate(-50%, -50%) scale(0.1);
+		a:hover{
 			background-color: $color-1;
-			//border-radius: 50%;
-			transition: all 0.4s ease;
+			color: white;
 		}
+
 	}
 
 

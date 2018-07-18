@@ -627,11 +627,15 @@ html{
 }
 
 
-.vam-table{
+.va-middle-table{
 	display: table-cell;
 	vertical-align: middle;
-	text-align: center;
 }
+.va-middle-inline{
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .va-middle{
 	vertical-align: middle;
 }
