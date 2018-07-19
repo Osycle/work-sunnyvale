@@ -97,9 +97,18 @@
 			]
 		}, {});
 
+
+
+
+
+
+
+
+
 		/*FLIKITY*/
 		function flickityPrevNext(className, classPrevNext) {
 			var carouselWrapper = $(className);
+			console.log(className);
 			for (var i = 0; i < carouselWrapper.length; i++) {
 				var crs = $(carouselWrapper[i]);
 				var carousel = crs.find(".carousel-items");
@@ -141,19 +150,29 @@
 				console.error(e);
 			}
 		}
+		
+		$('.button-carousel-nav').on('click', 'li', function() {
+			var that = $(this);
+			var selector = that.attr('data-selector');
+			that.addClass("is-selected");
+			that.siblings().removeClass("is-selected");
+		});
+
+
+
 
 		var arrowStyle = {
 		  x0: 10,
-		  x1: 75, y1: 50,
-		  x2: 75, y2: 35,
-		  x3: 75
+		  x1: 60, y1: 50,
+		  x2: 70, y2: 40,
+		  x3: 30
 		};
 
 		/*bnr-carousel*/
-		if( $(".bnr-carousel .carousel-items").length ){
+		if( $(".bnr-carousel .carousel-items figure").length ){
 			window.bnrCarousel = $(".bnr-carousel .carousel-items").flickity({
 				imagesLoaded: true,
-				autoPlay: 4000,
+				autoPlay: 4500,
 				pauseAutoPlayOnHover: true,
 				arrowShape: arrowStyle,
 				initialIndex: 0,
@@ -170,12 +189,23 @@
 			});
 			bnrCarousel.data("flickity");
 			//arrows
-			flickityPrevNext(".bnr-carousel");
+			//flickityPrevNext(".bnr-carousel");
 			//dots
+			for( var i = 0; i < $(bnrCarousel).find("figure").length; i++){
+				bnrCarousel.siblings().find(".button-carousel-nav ul").append('<li role="button" class="button"></li>');
+			}
+			bnrCarousel.on( 'select.flickity', function( event, index ) {
+				var index = $(this).find("figure.is-selected").index();
+			  $(this).siblings()
+			  			.find(".button-carousel-nav ul .button")
+			  			.eq(index)
+			  			.addClass("is-selected")
+			  			.siblings()
+			  			.removeClass("is-selected");
+			});
 	    $('.bnr-carousel .button-carousel-nav').on( 'click', 'li', function() {
 	      var index = $(this).index();
 	      bnrCarousel.flickity( 'select', index );
-	      console.log(index)
 	    });
 		}
 
@@ -183,18 +213,18 @@
 
 
 
-		/*short-news-carousel*/
-		if( $(".short-partners-carousel .carousel-items figure").length )
-			$(".short-partners-carousel .carousel-items").flickity({
+		/*short-gallery-carousel*/
+		if( $(".short-gallery-carousel .carousel-items figure").length )
+			$(".short-gallery-carousel .carousel-items").flickity({
 				imagesLoaded: true,
 				autoPlay: 2500,
 				pauseAutoPlayOnHover: true,
 				arrowShape: arrowStyle,
 				initialIndex: 0,
-				//friction: 1,
-				//selectedAttraction: 1,
+				friction: 1,
+				selectedAttraction: 1,
 				prevNextButtons: true,
-				draggable: checkSm(),
+				draggable: false,
 				wrapAround: false,
 				pageDots: false,
 				contain: false,
@@ -202,18 +232,11 @@
 				cellSelector: 'figure',
 				cellAlign: "center"
 			});
+		$(".custom-prev-next").map(function(i, el){
+			flickityPrevNext(el);
+		})
 		
 
-
-
-
-		
-		$('.button-carousel-nav').on('click', 'li', function() {
-			var that = $(this);
-			var selector = that.attr('data-selector');
-			that.addClass("is-selected");
-			that.siblings().removeClass("is-selected");
-		});
 
 
 

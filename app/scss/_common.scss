@@ -22,6 +22,7 @@ $color-gray_2: #7e7e7e;
 $color-gray_3: rgba($color-gray-1, 0.3);
 
 $bg-color-black: #555555;
+$bg-color-gray: #e5e5e5;
 
 
 
@@ -298,6 +299,29 @@ table {
 								0 0 20px 0 #000;
 		border-radius: 0px;
 	}
+	&:active{
+		box-shadow: 
+								-2px -2px 0px 0px darken(white, 12%), 
+								2px 2px 0px 0px $color-2, 
+								5px 5px 0 0 $color-3, 
+								0 0 10px 0 #000;
+	}
+	&.reverse{
+		&:hover{
+			box-shadow: 
+								-5px -5px 0px 0px darken(white, 12%), 
+								5px 5px 0px 0px $color-3, 
+								10px 10px 0 0 $color-1, 
+								0 0 20px 0 #000;
+		}
+		&:active{
+			box-shadow: 
+					-2px -2px 0px 0px darken(white, 12%), 
+					2px 2px 0px 0px $color-3, 
+					5px 5px 0 0 $color-1, 
+					0 0 10px 0 #000;
+		}
+	}
 }
 .hover-style-2{
 	transition: all 0.3s ease;
@@ -334,7 +358,7 @@ table {
 
 .bg-color-white{background-color: white;}
 .bg-color-black{background-color: $bg-color-black;}
-.bg-color-gray{background-color: #EEEEEE;}
+.bg-color-gray{background-color: $bg-color-gray;}
 
 .bg-color-1{background-color: $color-1;}
 .bg-color-2{background-color: $color-2;}
@@ -490,6 +514,8 @@ table {
 	white-space: nowrap;
 	text-align: center;
 	text-transform: uppercase;
+	color: white;
+	font-weight: 600;
 	//background-color: $color-1;
 	font-family: $font-family-1;
 	button{
@@ -501,8 +527,8 @@ table {
 		position: relative;
 		font-size: 0.95em;
 		&:not([class*="p-h"]){
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 		&:not([class*="p-v"]){
 			padding-top: 7px;
@@ -525,7 +551,7 @@ table {
 .btn-def, .btn-icon{
 	@extend .btn-style;
 	@extend .hover-style-1;
-	color: white;
+	
 	border-radius: 30px;
 	transition: all 0.5s ease-in-out;
 	*{
@@ -539,7 +565,6 @@ table {
 		border-radius: 20px;
 	}
 	&.reverse{
-		color: $color-1;
 		&:not([class*="bg-color"]){
 			background-color: $color-2;
 		}
@@ -756,6 +781,7 @@ label{
 h1,h2,h3,h4,h5{
 	color: inherit;
 	line-height: 170%;
+	text-transform: uppercase;
 }
 h1,h2,h3{
 	font-family: $font-family-1;
@@ -852,8 +878,8 @@ main{
 	background-color: white;
 	color: black;
 	p{
-		line-height: 120%;
-		font-size: 0.98em;
+		line-height: 150%;
+		font-size: 1em;
 	}
 	@extend .list-style-1;
 }
@@ -881,7 +907,7 @@ hr{
 		}
 	}
 	*:not(figure):not(div){
-		letter-spacing: 0.5px;
+		//letter-spacing: 0.5px;
 	}
 	.line-height-def{
 		line-height: 100%;
@@ -1044,12 +1070,12 @@ a[target="_blank"]{
 
 .pie-form-control{
 	border: 1px solid transparent;
-	border-bottom-color: white;
-	background-color: transparent;
-	padding: 7px 7px;
+	//border-bottom-color: white;
+	background-color: white;
+	padding: 7px 15px;
+	border-radius: 30px;
 	color: inherit;
-	@include placeholder-color( white );
-	text-transform: uppercase;
+	color: currentColor;
 }
 input.pie-form-control{
 	height: 40px;

@@ -146,33 +146,35 @@ html body{
   width: 100%;
   height: 100%;
   top: 0;
+  left: 0;
   pointer-events: none;
   *{
   	pointer-events: auto;
   }
 	.next, .prev{
-		font-size: 45px;
+		font-size: 20px;
 		width: 40px;
 		border: 0;
 		background-color: transparent;
 		position: absolute;
 		top: 50%;
 		//margin-top: -2.25px;
-		color: white;
-		fill: white;
+		color: black;
+		fill: black;
 		&:hover{
 			cursor: pointer;
 			color: $color-1;
 		}
 	}
 	.next{
-		right: 0;
+		right: 15px;
+		text-align: right;
 		&.reverse{
 			transform: scaleX(-1) translateY(-50%);
 		}
 	}
 	.prev{
-		left: 0;
+		left: 15px;
 		&.reverse{
 			transform: scaleX(-1) translateY(-50%);
 		}
@@ -182,33 +184,39 @@ html body{
 
 	.flickity-prev-next-button{
 		background: transparent;
-		//border: 4px solid white;
 		transition: all 0.2s ease-in-out;
 		top: 50%;
+		width: 30px;
 		z-index:2;
-		transform: translateY(-50%);
+		transform: translateY(-50%) scale(0.8);
 		&:hover, &:focus{
 			background-color: transparent;
+			.arrow{
+				fill: $color-1;
+			}
 		}
 		.arrow{
-			transfrom: scale(2);
-			fill: white;
-		}
-		&.previous{
-			//transform: scaleX(1);
-			transform-origin: center;
-		}
-		&.next{
-			//transform: scaleX(1);
+			fill: black;
 		}
 
+		&.previous{
+			left: 0;
+		}
+		&.next{
+			right: 0;
+			svg{
+				top: 0px;
+			}
+		}
+		svg{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
 		@media ( min-width:992px ){
-			.previous svg{
-				left: -20%;
-			}
-			.next svg{
-				right: -20%;
-			}
+
 		}
 
 	}

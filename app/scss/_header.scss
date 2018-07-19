@@ -305,55 +305,26 @@ ul[class*="sub"]{
 	background-size: 600px;
 	background-position: right;
 }
-.min-productions-sub-menu{
-	transition: all 0.8s ease 0.1s;
-	opacity: 1;
-	text-align: center;
-	padding: 15px;
-	width: 100%;
-	transform-origin: 50% 0;
-	//height: 520px;
-	background-color: #eee;
-	letter-spacing: -6px !important;
-	*{
-		letter-spacing: 0;
-	}
-	.img-content{
-		padding-top: 2px;
-	}
-	.img{
-		background-position: center;
-		background-size: contain;
-		height: 130px;
-	}
-	figure{
-		position: relative;
-		width: 50%;
-		float: left;
-		.desc-content{
-			position: absolute;
-			width: 100%;
-			text-align: center;
-			bottom: 0;
-			z-index: 1; 
-			padding: 15px 5px;
-		}
-		&:hover{
-			border-color: $color-1;
-			.desc-content{
-				background-color: $color-1;
-				color: white;
-			}
-		}
-	}
+.img-traf-3{
+  background-image: url(../img/other/traf-3.png);
+  height: 60px;
+  background-position: 10% 100%;
+  background-size: 380%;
+  background-repeat: no-repeat;
+  z-index: 1;
+  margin-top: -40px;
+  pointer-events: none;
+}
+.min-menu-footer{
 }
 
 
-@keyframes bgScroll {
-  to {
- 		background-position-y: 4000px;
-  }
-}
+
+// @keyframes bgScroll {
+//   to {
+//  		background-position-y: 4000px;
+//   }
+// }
 .min-menu-header{
 	transition: top 0.3s ease-in-out 0.3s;
 	opacity: 1;
@@ -367,14 +338,6 @@ ul[class*="sub"]{
 	color: white;
 	box-shadow: 0 0 20px 0 black;
 	background-color: darken($color-1, 5%);
-	.wrapper-bg{
-		@extend .fuller;
-    background-size: 800px;
-    background-position: left;
-		//filter: invert(1);
-		//animation: bgScroll 60s linear infinite;
-    opacity: 0.05;
-	}
 	.min-menu-logo{
 		padding: 10px 0;
 		width: 100%;
@@ -415,31 +378,10 @@ ul[class*="sub"]{
 		height: 35px;
 	}
 }
-.mm-listview{
-
-}
 .mm-slideout{
 	z-index: auto;
 }
-.mm-menu{
-	.submenu-types{
-		h5{
-			font-size: 1.5em;
-		}
-		ul li{
-			padding: 10px 15px;
-		}
-	}
-	.submenu-brands{
-		h5{
-			font-size: 1.5em;
-		}
-		border-radius: 0;
-		ul li{
-			padding: 10px 15px;
-		}
-	}
-}
+
 .mm-navbar{
 	position: relative;
 	.close-btn{
