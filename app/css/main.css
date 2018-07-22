@@ -2783,8 +2783,7 @@ template {
   .table, table {
     border-collapse: collapse !important; }
     .table td, table td,
-    .table th,
-    table th {
+    .table th, table th {
       background-color: #fff !important; }
   .table-bordered th,
   .table-bordered td {
@@ -2873,8 +2872,7 @@ hr {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
+.sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -3791,16 +3789,11 @@ th {
   max-width: 100%;
   margin-bottom: 20px; }
   .table > thead > tr > th, table > thead > tr > th,
-  .table > thead > tr > td,
-  table > thead > tr > td,
-  .table > tbody > tr > th,
-  table > tbody > tr > th,
-  .table > tbody > tr > td,
-  table > tbody > tr > td,
-  .table > tfoot > tr > th,
-  table > tfoot > tr > th,
-  .table > tfoot > tr > td,
-  table > tfoot > tr > td {
+  .table > thead > tr > td, table > thead > tr > td,
+  .table > tbody > tr > th, table > tbody > tr > th,
+  .table > tbody > tr > td, table > tbody > tr > td,
+  .table > tfoot > tr > th, table > tfoot > tr > th,
+  .table > tfoot > tr > td, table > tfoot > tr > td {
     padding: 8px;
     line-height: 1.42857;
     vertical-align: top;
@@ -3809,16 +3802,11 @@ th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd; }
   .table > caption + thead > tr:first-child > th, table > caption + thead > tr:first-child > th,
-  .table > caption + thead > tr:first-child > td,
-  table > caption + thead > tr:first-child > td,
-  .table > colgroup + thead > tr:first-child > th,
-  table > colgroup + thead > tr:first-child > th,
-  .table > colgroup + thead > tr:first-child > td,
-  table > colgroup + thead > tr:first-child > td,
-  .table > thead:first-child > tr:first-child > th,
-  table > thead:first-child > tr:first-child > th,
-  .table > thead:first-child > tr:first-child > td,
-  table > thead:first-child > tr:first-child > td {
+  .table > caption + thead > tr:first-child > td, table > caption + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th, table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td, table > thead:first-child > tr:first-child > td {
     border-top: 0; }
   .table > tbody + tbody, table > tbody + tbody {
     border-top: 2px solid #ddd; }
@@ -3864,28 +3852,17 @@ table th[class*="col-"] {
   display: table-cell; }
 
 .table > thead > tr > td.active, table > thead > tr > td.active,
-.table > thead > tr > th.active,
-table > thead > tr > th.active,
-.table > thead > tr.active > td,
-table > thead > tr.active > td,
-.table > thead > tr.active > th,
-table > thead > tr.active > th,
-.table > tbody > tr > td.active,
-table > tbody > tr > td.active,
-.table > tbody > tr > th.active,
-table > tbody > tr > th.active,
-.table > tbody > tr.active > td,
-table > tbody > tr.active > td,
-.table > tbody > tr.active > th,
-table > tbody > tr.active > th,
-.table > tfoot > tr > td.active,
-table > tfoot > tr > td.active,
-.table > tfoot > tr > th.active,
-table > tfoot > tr > th.active,
-.table > tfoot > tr.active > td,
-table > tfoot > tr.active > td,
-.table > tfoot > tr.active > th,
-table > tfoot > tr.active > th {
+.table > thead > tr > th.active, table > thead > tr > th.active,
+.table > thead > tr.active > td, table > thead > tr.active > td,
+.table > thead > tr.active > th, table > thead > tr.active > th,
+.table > tbody > tr > td.active, table > tbody > tr > td.active,
+.table > tbody > tr > th.active, table > tbody > tr > th.active,
+.table > tbody > tr.active > td, table > tbody > tr.active > td,
+.table > tbody > tr.active > th, table > tbody > tr.active > th,
+.table > tfoot > tr > td.active, table > tfoot > tr > td.active,
+.table > tfoot > tr > th.active, table > tfoot > tr > th.active,
+.table > tfoot > tr.active > td, table > tfoot > tr.active > td,
+.table > tfoot > tr.active > th, table > tfoot > tr.active > th {
   background-color: #f5f5f5; }
 
 .table-hover > tbody > tr > td.active:hover,
@@ -3896,28 +3873,17 @@ table > tfoot > tr.active > th {
   background-color: #e8e8e8; }
 
 .table > thead > tr > td.success, table > thead > tr > td.success,
-.table > thead > tr > th.success,
-table > thead > tr > th.success,
-.table > thead > tr.success > td,
-table > thead > tr.success > td,
-.table > thead > tr.success > th,
-table > thead > tr.success > th,
-.table > tbody > tr > td.success,
-table > tbody > tr > td.success,
-.table > tbody > tr > th.success,
-table > tbody > tr > th.success,
-.table > tbody > tr.success > td,
-table > tbody > tr.success > td,
-.table > tbody > tr.success > th,
-table > tbody > tr.success > th,
-.table > tfoot > tr > td.success,
-table > tfoot > tr > td.success,
-.table > tfoot > tr > th.success,
-table > tfoot > tr > th.success,
-.table > tfoot > tr.success > td,
-table > tfoot > tr.success > td,
-.table > tfoot > tr.success > th,
-table > tfoot > tr.success > th {
+.table > thead > tr > th.success, table > thead > tr > th.success,
+.table > thead > tr.success > td, table > thead > tr.success > td,
+.table > thead > tr.success > th, table > thead > tr.success > th,
+.table > tbody > tr > td.success, table > tbody > tr > td.success,
+.table > tbody > tr > th.success, table > tbody > tr > th.success,
+.table > tbody > tr.success > td, table > tbody > tr.success > td,
+.table > tbody > tr.success > th, table > tbody > tr.success > th,
+.table > tfoot > tr > td.success, table > tfoot > tr > td.success,
+.table > tfoot > tr > th.success, table > tfoot > tr > th.success,
+.table > tfoot > tr.success > td, table > tfoot > tr.success > td,
+.table > tfoot > tr.success > th, table > tfoot > tr.success > th {
   background-color: #dff0d8; }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -3928,28 +3894,17 @@ table > tfoot > tr.success > th {
   background-color: #d0e9c6; }
 
 .table > thead > tr > td.info, table > thead > tr > td.info,
-.table > thead > tr > th.info,
-table > thead > tr > th.info,
-.table > thead > tr.info > td,
-table > thead > tr.info > td,
-.table > thead > tr.info > th,
-table > thead > tr.info > th,
-.table > tbody > tr > td.info,
-table > tbody > tr > td.info,
-.table > tbody > tr > th.info,
-table > tbody > tr > th.info,
-.table > tbody > tr.info > td,
-table > tbody > tr.info > td,
-.table > tbody > tr.info > th,
-table > tbody > tr.info > th,
-.table > tfoot > tr > td.info,
-table > tfoot > tr > td.info,
-.table > tfoot > tr > th.info,
-table > tfoot > tr > th.info,
-.table > tfoot > tr.info > td,
-table > tfoot > tr.info > td,
-.table > tfoot > tr.info > th,
-table > tfoot > tr.info > th {
+.table > thead > tr > th.info, table > thead > tr > th.info,
+.table > thead > tr.info > td, table > thead > tr.info > td,
+.table > thead > tr.info > th, table > thead > tr.info > th,
+.table > tbody > tr > td.info, table > tbody > tr > td.info,
+.table > tbody > tr > th.info, table > tbody > tr > th.info,
+.table > tbody > tr.info > td, table > tbody > tr.info > td,
+.table > tbody > tr.info > th, table > tbody > tr.info > th,
+.table > tfoot > tr > td.info, table > tfoot > tr > td.info,
+.table > tfoot > tr > th.info, table > tfoot > tr > th.info,
+.table > tfoot > tr.info > td, table > tfoot > tr.info > td,
+.table > tfoot > tr.info > th, table > tfoot > tr.info > th {
   background-color: #d9edf7; }
 
 .table-hover > tbody > tr > td.info:hover,
@@ -3960,28 +3915,17 @@ table > tfoot > tr.info > th {
   background-color: #c4e3f3; }
 
 .table > thead > tr > td.warning, table > thead > tr > td.warning,
-.table > thead > tr > th.warning,
-table > thead > tr > th.warning,
-.table > thead > tr.warning > td,
-table > thead > tr.warning > td,
-.table > thead > tr.warning > th,
-table > thead > tr.warning > th,
-.table > tbody > tr > td.warning,
-table > tbody > tr > td.warning,
-.table > tbody > tr > th.warning,
-table > tbody > tr > th.warning,
-.table > tbody > tr.warning > td,
-table > tbody > tr.warning > td,
-.table > tbody > tr.warning > th,
-table > tbody > tr.warning > th,
-.table > tfoot > tr > td.warning,
-table > tfoot > tr > td.warning,
-.table > tfoot > tr > th.warning,
-table > tfoot > tr > th.warning,
-.table > tfoot > tr.warning > td,
-table > tfoot > tr.warning > td,
-.table > tfoot > tr.warning > th,
-table > tfoot > tr.warning > th {
+.table > thead > tr > th.warning, table > thead > tr > th.warning,
+.table > thead > tr.warning > td, table > thead > tr.warning > td,
+.table > thead > tr.warning > th, table > thead > tr.warning > th,
+.table > tbody > tr > td.warning, table > tbody > tr > td.warning,
+.table > tbody > tr > th.warning, table > tbody > tr > th.warning,
+.table > tbody > tr.warning > td, table > tbody > tr.warning > td,
+.table > tbody > tr.warning > th, table > tbody > tr.warning > th,
+.table > tfoot > tr > td.warning, table > tfoot > tr > td.warning,
+.table > tfoot > tr > th.warning, table > tfoot > tr > th.warning,
+.table > tfoot > tr.warning > td, table > tfoot > tr.warning > td,
+.table > tfoot > tr.warning > th, table > tfoot > tr.warning > th {
   background-color: #fcf8e3; }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -3992,28 +3936,17 @@ table > tfoot > tr.warning > th {
   background-color: #faf2cc; }
 
 .table > thead > tr > td.danger, table > thead > tr > td.danger,
-.table > thead > tr > th.danger,
-table > thead > tr > th.danger,
-.table > thead > tr.danger > td,
-table > thead > tr.danger > td,
-.table > thead > tr.danger > th,
-table > thead > tr.danger > th,
-.table > tbody > tr > td.danger,
-table > tbody > tr > td.danger,
-.table > tbody > tr > th.danger,
-table > tbody > tr > th.danger,
-.table > tbody > tr.danger > td,
-table > tbody > tr.danger > td,
-.table > tbody > tr.danger > th,
-table > tbody > tr.danger > th,
-.table > tfoot > tr > td.danger,
-table > tfoot > tr > td.danger,
-.table > tfoot > tr > th.danger,
-table > tfoot > tr > th.danger,
-.table > tfoot > tr.danger > td,
-table > tfoot > tr.danger > td,
-.table > tfoot > tr.danger > th,
-table > tfoot > tr.danger > th {
+.table > thead > tr > th.danger, table > thead > tr > th.danger,
+.table > thead > tr.danger > td, table > thead > tr.danger > td,
+.table > thead > tr.danger > th, table > thead > tr.danger > th,
+.table > tbody > tr > td.danger, table > tbody > tr > td.danger,
+.table > tbody > tr > th.danger, table > tbody > tr > th.danger,
+.table > tbody > tr.danger > td, table > tbody > tr.danger > td,
+.table > tbody > tr.danger > th, table > tbody > tr.danger > th,
+.table > tfoot > tr > td.danger, table > tfoot > tr > td.danger,
+.table > tfoot > tr > th.danger, table > tfoot > tr > th.danger,
+.table > tfoot > tr.danger > td, table > tfoot > tr.danger > td,
+.table > tfoot > tr.danger > th, table > tfoot > tr.danger > th {
   background-color: #f2dede; }
 
 .table-hover > tbody > tr > td.danger:hover,
@@ -5021,10 +4954,8 @@ tbody.collapse.in {
     -webkit-border-radius: 4px;
     border-radius: 4px; }
   .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
-  .nav-tabs-justified > .active > a:hover,
-  .nav-tabs.nav-justified > .active > a:hover,
-  .nav-tabs-justified > .active > a:focus,
-  .nav-tabs.nav-justified > .active > a:focus {
+  .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
+  .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
     border: 1px solid #ddd; }
   @media (min-width: 768px) {
     .nav-tabs-justified > li > a, .nav-tabs.nav-justified > li > a {
@@ -5032,10 +4963,8 @@ tbody.collapse.in {
       -webkit-border-radius: 4px 4px 0 0;
       border-radius: 4px 4px 0 0; }
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
-    .nav-tabs-justified > .active > a:hover,
-    .nav-tabs.nav-justified > .active > a:hover,
-    .nav-tabs-justified > .active > a:focus,
-    .nav-tabs.nav-justified > .active > a:focus {
+    .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
+    .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
       border-bottom-color: #fff; } }
 
 .tab-content > .tab-pane {
@@ -5963,9 +5892,10 @@ html {
 */
 .breadcrumb {
   background: transparent;
-  color: black; }
+  color: black;
+  font-weight: 600; }
   .breadcrumb, .breadcrumb a, .breadcrumb .active {
-    color: rgba(0, 0, 0, 0.4);
+    color: black;
     -webkit-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
@@ -5987,7 +5917,7 @@ html {
   .breadcrumb > li + li:before {
     color: rgba(0, 0, 0, 0.4);
     font-family: FontAwesome;
-    content: "\f0da";
+    content: " / ";
     font-size: 0.9em;
     margin: 0  15px; }
   .breadcrumb li {
@@ -6169,14 +6099,14 @@ table {
   border-radius: 15px;
   border: 1px solid rgba(229, 229, 229, 0.3); }
 
-.fuller, .claf, [data-flicker]:before, .h1-style:before, html body .tp-bullets.simplebullets.round .bullet:before, .fancybox-bg:before, .fancybox-bg:after, .fancybox-is-open .fancybox-bg:before, .fancybox-is-open .fancybox-bg:after, .cell-hover, .hover-content .cell-hover, .fullscreen-container .wrapper-bg {
+.fuller, .claf, [data-flicker]:before, .h1-style:before, .short-services .traf-style-1:before, .short-services .traf-style-1:after, .footer-dev:before, html body .tp-bullets.simplebullets.round .bullet:before, .fancybox-bg:before, .fancybox-bg:after, .fancybox-is-open .fancybox-bg:before, .fancybox-is-open .fancybox-bg:after, .cell-hover, .hover-content .cell-hover, .fullscreen-container .wrapper-bg {
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0; }
 
-.claf, [data-flicker]:before, .h1-style:before, html body .tp-bullets.simplebullets.round .bullet:before, .fancybox-bg:before, .fancybox-bg:after, .fancybox-is-open .fancybox-bg:before, .fancybox-is-open .fancybox-bg:after {
+.claf, [data-flicker]:before, .h1-style:before, .short-services .traf-style-1:before, .short-services .traf-style-1:after, .footer-dev:before, html body .tp-bullets.simplebullets.round .bullet:before, .fancybox-bg:before, .fancybox-bg:after, .fancybox-is-open .fancybox-bg:before, .fancybox-is-open .fancybox-bg:after {
   content: ""; }
 
 .clafclear {
@@ -6437,8 +6367,8 @@ table {
 */
 .pagination-div .pagination li {
   display: inline-block;
-  -webkit-border-radius: 1px;
-  border-radius: 1px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   font-weight: 500;
   width: 30px;
   height: 30px;
@@ -6447,7 +6377,7 @@ table {
     color: #ff682e; }
   .pagination-div .pagination li a {
     border: 1px solid transparent;
-    color: #e5e5e5;
+    color: black;
     border: 0;
     display: block;
     background-color: transparent;
@@ -6578,31 +6508,29 @@ h1, h2, h3, h4 {
 h1 {
   position: relative;
   font-size: 2.5em;
-  margin-bottom: 15px;
-  line-height: 125%; }
+  margin-bottom: 15px; }
 
 h2 {
   position: relative;
   font-weight: 600;
   font-size: 1.6875em;
-  line-height: 125%;
   margin-bottom: 15px; }
 
 h3 {
   position: relative;
   font-weight: 600;
-  font-size: 1.25em;
-  line-height: 125%; }
+  font-size: 1.25em; }
 
 h4 {
   font-weight: 700;
-  text-transform: unppercase;
-  line-height: 120%;
+  text-transform: uppercase;
   font-size: 1.125em; }
 
 h5 {
-  line-height: 110%;
-  font-size: 0.875em;
+  line-height: 170%;
+  font-size: 0.9375em;
+  font-weight: 700;
+  text-transform: uppercase;
   font-family: "Open Sans"; }
 
 h1[align='center']:before, h2[align='center']:before, h3[align='center']:before, h4[align='center']:before, h5[align='center']:before {
@@ -6652,7 +6580,6 @@ hr {
 
 .main-content {
   position: relative;
-  background-image: url("../img/other/texture-1.jpg");
   min-height: 300px; }
   @media (max-width: 991px) {
     .main-content {
@@ -7336,7 +7263,7 @@ textarea.form-control {
 	_content.css
 */
 .parag-gray p {
-  color: #e5e5e5; }
+  color: gray; }
 
 .bnr-slider {
   position: relative;
@@ -7347,7 +7274,7 @@ textarea.form-control {
     -ms-transform: inherit !important;
     transform: inherit !important; }
   .bnr-slider .bnr-carousel {
-    background-image: url("../img/bg/bg-slider.jpg");
+    background-color: #a6bf26;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -7510,6 +7437,106 @@ textarea.form-control {
     .short-gallery-carousel .short-gallery-carousel {
       padding: 0 50px; } }
 
+.short-services .container {
+  position: relative; }
+
+.short-services .traf-style-1 {
+  position: absolute;
+  height: 131px;
+  width: 100%;
+  top: -100px;
+  z-index: -1; }
+  .short-services .traf-style-1:before, .short-services .traf-style-1:after {
+    -webkit-background-size: contian contian;
+    background-size: contian;
+    background-repeat: no-repeat; }
+  .short-services .traf-style-1:before {
+    background-position: 55% 28px;
+    background-image: url("../img/other/traf-1.png"); }
+  .short-services .traf-style-1:after {
+    background-position: 95% 50px;
+    background-image: url("../img/other/traf-2.png"); }
+
+.short-staff .entry-header {
+  padding-bottom: 100px; }
+
+.short-staff-items figure {
+  padding: 0 10px; }
+  .short-staff-items figure .img {
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 245px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px; }
+
+.staff-progress .staff-progress-item {
+  width: 100%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  position: relative; }
+
+.staff-progress .progress-line-wrapper {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 7px;
+  position: absolute;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.staff-progress .progress-line {
+  width: 20%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fecc03;
+  height: 100%; }
+
+.staff-progress .progress-persent-wrapper {
+  height: 20px;
+  width: 20%;
+  top: -25px;
+  position: absolute; }
+
+.staff-progress .progress-persent {
+  text-align: right;
+  display: inline-block;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
+  font-size: 0.9em;
+  right: 0; }
+
+.staff-progress .progresses {
+  width: 0%; }
+
+/*--gallery */
+.gallery-items figure .img {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  height: 275px; }
+
+/*--staff */
+.staff-items figure .img {
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 245px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; }
+
+.staff-main figure .img {
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 245px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; }
+
 /* 
 		_footer.scss
 */
@@ -7518,7 +7545,7 @@ textarea.form-control {
 */
 #footer {
   position: relative;
-  color: white;
+  color: rgba(0, 0, 0, 0.4);
   min-height: 150px;
   line-height: 170%;
   background-repeat: no-repeat;
@@ -7543,8 +7570,8 @@ textarea.form-control {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   font-size: 14px;
   -webkit-border-radius: 50%;
   border-radius: 50%; }
@@ -7591,6 +7618,44 @@ textarea.form-control {
 .footer-socicons .icon-content.telegram {
   background-color: #00ade1;
   font-size: 20px; }
+
+.footer-menu li {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin: 25px 0; }
+
+.footer-map #map-canvas {
+  overflow: hidden;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  height: 270px; }
+
+.footer-contacts-info li {
+  margin-right: 30px; }
+
+.footer-dev {
+  color: white; }
+  .footer-dev:before {
+    background-image: url("../img/other/traf-3.png");
+    background-position: 0 100%;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 102px;
+    bottom: 0;
+    top: inherit; }
+  .footer-dev .copyright, .footer-dev .dev {
+    margin-top: 3px;
+    margin-bottom: 3px; }
+    @media (max-width: 991px) {
+      .footer-dev .copyright, .footer-dev .dev {
+        margin: 30px 0; }
+        .footer-dev .copyright span.color-2, .footer-dev .dev span.color-2 {
+          color: #ff682e; } }
+  @media (min-width: 992px) {
+    .footer-dev {
+      margin-top: 30px; } }
 
 /* 
 		_other.scss
@@ -7668,7 +7733,7 @@ html body .tp-bullets.simplebullets.round .bullet {
 
 .fancybox-is-open .fancybox-bg {
   opacity: 1;
-  background-color: white; }
+  background-color: rgba(255, 255, 255, 0.8); }
   .fancybox-is-open .fancybox-bg:before, .fancybox-is-open .fancybox-bg:after {
     -webkit-transition: all 0.8s ease;
     -o-transition: all 0.8s ease;

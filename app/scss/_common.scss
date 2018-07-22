@@ -191,8 +191,9 @@ html{
 .breadcrumb{
 	background: transparent;
 	color: black;
+	font-weight: 600;
 	&, a, .active{ 
-		color: rgba(black, 0.4);
+		color: rgba(black, 1);
 		transition: all 0.3s ease-in;
 		font-size: em(15, 16);
 		a:hover{
@@ -219,7 +220,7 @@ html{
 
 		color: rgba(black, 0.4);
 		font-family: FontAwesome;
-		content: "\f0da";
+		content: " / ";
 		font-size: 0.9em;
 		margin:0  15px;
 	}
@@ -624,7 +625,7 @@ table {
 	.pagination{
 		li{
 			display: inline-block;
-			border-radius: 1px;
+			border-radius: 10px;
 			//margin: 0 3px;
 			font-weight: 500;
 			width: 30px;
@@ -637,7 +638,7 @@ table {
 			}
 			a{
 				border:1px solid transparent;
-				color: $color-gray-1;
+				color: black;
 				border: 0;
 				display: block;
 				background-color: transparent;
@@ -797,30 +798,28 @@ h1{
 	position: relative;	
 	font-size: em(40, 16);
 	margin-bottom: 15px;
-	line-height: 125%;
 }
 h2{
 	position: relative;
 	font-weight: 600;
 	font-size: em(27, 16);
-	line-height: 125%;
 	margin-bottom: 15px;
 } 
 h3{
 	position: relative;
 	font-weight: 600;
 	font-size: em(20, 16);
-	line-height: 125%;
 }
 h4{
 	font-weight: 700;
-	text-transform: unppercase;
-	line-height: 120%;
+	text-transform: uppercase;
 	font-size: em(18, 16);
 }
 h5{	
-	line-height: 110%;
-	font-size: em(14, 16);
+	line-height: 170%;
+	font-size: em(15, 16);
+	font-weight: 700;
+	text-transform: uppercase;
 	font-family: $font-family-1;
 }
 h1,h2,h3,h4,h5 {
@@ -892,7 +891,6 @@ hr{
 .main-content{
 	//z-index: 1;
 	position: relative;
-	background-image: url('../img/other/texture-1.jpg');
 	min-height: 300px;	
 	@media (max-width: 991px){
 		text-align: center ;

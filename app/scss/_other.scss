@@ -111,7 +111,7 @@ html body{
 .fancybox-is-open{
 	.fancybox-bg{
 		opacity: 1;
-		background-color: rgba(white, 1);
+		background-color: rgba(white, 0.8);
 		&:before, &:after{
 			transition: all 0.8s ease;
 		}

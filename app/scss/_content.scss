@@ -3,7 +3,7 @@
 */
 .parag-gray{
 	p{
-		color: $color-gray-1;
+		color: gray;
 	}
 }
 
@@ -56,7 +56,7 @@
 		transform: inherit !important;
 	}
 	.bnr-carousel{
-		background-image: url('../img/bg/bg-slider.jpg');
+		background-color: $color-3;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
@@ -241,6 +241,33 @@
 
 
 
+//short-services
+.short-services{
+	.container{
+		position: relative;
+	}
+	.traf-style-1{
+		position: absolute;
+		height: 131px;
+		width: 100%;
+		top: -100px;
+		z-index:-1;
+		&:before, &:after{
+			@extend .claf;
+			background-size: contian;
+			background-repeat: no-repeat;
+		}
+		&:before{
+			background-position: 55% 28px;
+			background-image: url('../img/other/traf-1.png');
+		}
+		&:after{
+			background-position: 95% 50px;
+			background-image: url('../img/other/traf-2.png');
+		}
+
+	}
+}
 
 
 
@@ -248,3 +275,105 @@
 
 
 
+
+
+//short-staff
+.short-staff{
+	.entry-header{
+		padding-bottom: 100px;
+	}
+}
+.short-staff-items{
+	figure{
+		padding: 0 10px;
+		.img{
+			background-position: center;
+			background-size: cover;
+			height: 245px;
+			border-radius: 30px;
+		}
+	}
+	@media (min-width:992px) {
+
+	}
+}
+
+.staff-progress{
+	.staff-progress-item{
+		width: 100%;
+		border-radius: 5px;
+		position: relative;
+	}
+	.progress-line-wrapper{
+		width: 100%;
+		background-color: rgba(black, 0.1);
+		height: 7px;
+		position: absolute;
+		overflow: hidden;
+		border-radius: 5px;
+	}
+	.progress-line{
+		width: 20%;
+		border-radius: 5px;
+		//transition: all 0.1s ease;
+		//transform: translateX(-50%);
+		background-color: darken($color-2, 10%);
+		height: 100%;
+	}
+	.progress-persent-wrapper{
+		height: 20px;
+		width: 20%;
+		top: -25px;
+		position: absolute;
+	}
+	.progress-persent{
+		text-align: right;
+		display: inline-block;
+		font-weight: 600;
+		width: 100%;
+		height: 100%;
+		transform: translateX(10px);
+		font-size:0.9em;
+		right: 0;
+	}
+	.progresses{
+			width: 0%;
+	}
+}
+
+
+
+/*--gallery */
+.gallery-items{
+	figure{
+		.img{
+			background-size: cover;
+			background-position: center;
+			height: 275px;
+		}
+	}
+}
+/*--staff */
+.staff-items{
+	figure{
+		.img{
+			background-position: center;
+			background-size: cover;
+			height: 245px;
+			border-radius: 30px;
+		}
+	}
+	@media (min-width:992px) {
+
+	}
+}
+.staff-main{
+	figure{
+		.img{
+			background-position: center;
+			background-size: cover;
+			height: 245px;
+			border-radius: 30px;
+		}
+	}
+}

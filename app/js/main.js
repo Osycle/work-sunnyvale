@@ -217,7 +217,7 @@
 		if( $(".short-gallery-carousel .carousel-items figure").length )
 			$(".short-gallery-carousel .carousel-items").flickity({
 				imagesLoaded: true,
-				autoPlay: 2500,
+				autoPlay: 3300,
 				pauseAutoPlayOnHover: true,
 				arrowShape: arrowStyle,
 				initialIndex: 0,
@@ -225,7 +225,7 @@
 				selectedAttraction: 1,
 				prevNextButtons: true,
 				draggable: false,
-				wrapAround: false,
+				wrapAround: true,
 				pageDots: false,
 				contain: false,
 				percentPosition: true,
@@ -317,6 +317,7 @@
 		//SCROLL
 		var minMenu = $(".header-scroll") || null;
 		var headerRange = false;
+		var staffProgressStatus = false;
 		$(window).on("scroll", function(e) {
 
 			//Адаптация хедера при скролинге
@@ -330,6 +331,11 @@
 				if (minMenu) minMenu.removeClass("scrolled");
 			} //.originalEvent.wheelDelta
 
+
+			if( scrolledDiv($(".staff-progress")) && !staffProgressStatus ){
+				staffProgress();
+				staffProgressStatus = !staffProgressStatus;
+			}
 		});
 
 
@@ -344,16 +350,33 @@
 
 
 
-	 $("form").on("keyup", ".field-void", function(){
-			if(this.value != '')
-				this.setAttribute('filled', '');
-			else
-				this.removeAttribute('filled');
-	 }) 
-	 
-	 
-	 
-
+		//Прогресс персонала
+		function staffProgress(){
+			$("[data-progress]").map(function(i, el){
+				el = $(el);
+				var endProgress = el.attr("data-progress")*1 || null;
+				var persentContent = el.find(".progress-persent span");
+				var progressTime = 1000;
+				var cnt = 0;
+				var secTime = endProgress/100;
+				for( var i = 0; i < endProgress/secTime; i++){
+						//console.log( cnt, endProgress,cnt )
+						progressTime += 15; 
+					setTimeout(function(){
+						cnt += secTime;
+						$(el).find(".progresses").css("width", Math.round(cnt)+"%")
+						persentContent.text( Math.round(cnt) )
+					},progressTime)
+				}
+			})
+		}
+    
+    $(".staff-items a").on("click", function() {
+      var carpetsTabTop = $(".staff-main").offset().top;
+      $("html").animate({
+        scrollTop: !checkSm() ? carpetsTabTop - 120 : carpetsTabTop  - 110
+      }, 500);
+    })
 
 
 
