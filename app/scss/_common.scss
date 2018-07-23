@@ -7,7 +7,7 @@
 $color-1: #ff682e !default;
 $color-2: #fed636 !default;
 $color-3: #a6bf26 !default;
-$color-4: darken($color-3, 35%) !default;
+$color-4: #384f92 !default;
 $color-5: #008CC7 !default;
 
 $font-family-1: "Open Sans";
@@ -873,7 +873,7 @@ blockquote{
 main{
 	//overflow: hidden;
 	position: relative;
-	min-height: 300px;
+	//min-height: 300px;
 	background-color: white;
 	color: black;
 	p{
@@ -891,7 +891,6 @@ hr{
 .main-content{
 	//z-index: 1;
 	position: relative;
-	min-height: 300px;	
 	@media (max-width: 991px){
 		text-align: center ;
 	}

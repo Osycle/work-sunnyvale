@@ -113,22 +113,28 @@
 		margin-right: 30px;
 	}
 }
-
+.footer-contacts{
+	p{
+		font-weight: 600;
+		color: rgba(black, 0.3);
+	}
+}
 .footer-dev{
 	color: white;	
 	&:before{
 		@extend .claf;
 		background-image: url('../img/other/traf-3.png');
-		background-position: 0 100%;
-		background-size: contain;
+		pointer-events: none;
+		background-position: 50% 100%;
+		background-size: auto;
 		background-repeat: no-repeat;
 		height: 102px;
 		bottom: 0;
 		top: inherit;
 	}
 	.copyright, .dev{
-		margin-top: 3px;
-		margin-bottom: 3px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		@media (max-width: 991px){
 			margin: 30px 0;
 			span.color-2{
